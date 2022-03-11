@@ -12,6 +12,38 @@ export class AppComponent {
   resultado:string = "";
   opera:string = "";
 
+  uno():void{
+    this.resultado += "1";
+  }
+  dos():void{
+    this.resultado += "2";
+  }
+  tres():void{
+    this.resultado += "3";
+  }
+  cuatro():void{
+    this.resultado += "4";
+  }
+  cinco():void{
+    this.resultado += "5";
+  }
+  seis():void{
+    this.resultado += "6";
+  }
+  siete():void{
+    this.resultado += "7";
+  }
+  ocho():void{
+    this.resultado += "8";
+  }
+  nueve():void{
+    this.resultado += "9";
+  }
+  cero():void{
+    this.resultado += "0";
+  }
+
+
   suma():void{
     this.operandoa = (this.resultado);
     this.opera="+";
@@ -41,7 +73,7 @@ export class AppComponent {
     this.resolver();
   }
 
-  resolver():void{
+  resolver(){
 
     let res=0;
 
@@ -61,20 +93,8 @@ export class AppComponent {
       
     }
 
-    /*if(this.opera="+"){
-     res = this.operandoa + this.operandob;
-    } else if(this.opera="-"){
-      res = this.operandoa - this.operandob;
-    } else if(this.opera="*"){
-      res = this.operandoa * this.operandob;
-    } else if(this.opera="/"){
-      res = this.operandoa / this.operandob;
-    }*/
-
+    this.limpiar();
     res = parseInt(this.resultado);
-    console.log(res);
-    this.resetear();
-
 
   }
 
