@@ -7,44 +7,61 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'calculadora-app';
-  operandoa:number = 0;
-  operandob:number = 0;
+  operandoa:string = ""
+  operandob:string = "";
   resultado:string = "";
   opera:string = "";
 
   suma():void{
-    this.operandoa = parseInt(this.resultado)
+    this.operandoa = (this.resultado);
     this.opera="+";
     this.limpiar();
   }
 
   resta():void{
-    this.operandoa = parseInt(this.resultado);
+    this.operandoa = (this.resultado);
     this.opera="-";
     this.limpiar();
   }
 
   multiplicacion():void{
-    this.operandoa = parseInt(this.resultado);
+    this.operandoa = (this.resultado);
     this.opera="*";
     this.limpiar();
   }
 
   division():void{
-    this.operandoa = parseInt(this.resultado);
+    this.operandoa = (this.resultado);
     this.opera="/";
     this.limpiar();
   }
 
   igual():void{
-    this.operandoa = parseInt(this.resultado);
+    this.operandob = (this.resultado);
     this.resolver();
   }
 
   resolver():void{
+
     let res=0;
 
-    if(this.opera="+"){
+    switch(this.opera){
+      case "+":
+        res = parseInt(this.operandoa) + parseInt(this.operandob);
+        break;
+      case "-":
+        res = parseInt(this.operandoa) - parseInt(this.operandob);
+        break;
+      case "*":
+        res = parseInt(this.operandoa) * parseInt(this.operandob);
+        break;
+      case "/":
+        res = parseInt(this.operandoa) / parseInt(this.operandob);
+        break;
+      
+    }
+
+    /*if(this.opera="+"){
      res = this.operandoa + this.operandob;
     } else if(this.opera="-"){
       res = this.operandoa - this.operandob;
@@ -52,11 +69,11 @@ export class AppComponent {
       res = this.operandoa * this.operandob;
     } else if(this.opera="/"){
       res = this.operandoa / this.operandob;
-    }
+    }*/
 
-    this.resetear();
     res = parseInt(this.resultado);
     console.log(res);
+    this.resetear();
 
 
   }
@@ -66,8 +83,8 @@ export class AppComponent {
   }
 
   resetear():void{
-    this.operandoa = 0;
-    this.operandob = 0;
+    this.operandoa = "";
+    this.operandob = "";
     this.opera = "";
     this.resultado = "";
   }
