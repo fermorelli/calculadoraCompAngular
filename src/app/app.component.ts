@@ -45,31 +45,33 @@ export class AppComponent {
 
 
   suma():void{
-    this.operandoa = (this.resultado);
+    this.operandoa = this.resultado;
     this.opera="+";
     this.limpiar();
+    console.log(this.operandoa);
   }
 
   resta():void{
-    this.operandoa = (this.resultado);
+    this.operandoa = this.resultado;
     this.opera="-";
     this.limpiar();
   }
 
   multiplicacion():void{
-    this.operandoa = (this.resultado);
+    this.operandoa = this.resultado;
     this.opera="*";
     this.limpiar();
   }
 
   division():void{
-    this.operandoa = (this.resultado);
+    this.operandoa = this.resultado;
     this.opera="/";
     this.limpiar();
   }
 
   igual():void{
-    this.operandob = (this.resultado);
+    this.operandob = this.resultado;
+    console.log(this.operandob);
     this.resolver();
   }
 
