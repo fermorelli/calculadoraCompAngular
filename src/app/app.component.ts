@@ -75,6 +75,17 @@ export class AppComponent {
     this.resolver();
   }
 
+  limpiar():void{
+    this.resultado="";
+  }
+
+  resetear():void{
+    this.operandoa = "";
+    this.operandob = "";
+    this.opera = "";
+    this.resultado = "";
+  }
+
   resolver(){
 
     let res=0;
@@ -100,16 +111,7 @@ export class AppComponent {
 
   }
 
-  limpiar():void{
-    this.resultado="";
-  }
-
-  resetear():void{
-    this.operandoa = "";
-    this.operandob = "";
-    this.opera = "";
-    this.resultado = "";
-  }
+  
 
  /* onSumar():void{
     this.operandoa=+this.resultado;
